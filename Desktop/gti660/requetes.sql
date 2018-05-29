@@ -3,20 +3,17 @@ CREATE TABLE personne (
 	id INT , 
 	nom VARCHAR (40) , 
 	anniversaire DATE ,
-	photo VARCHAR(255),
-	bio VARCHAR(255),
+	photo VARCHAR(100),
+	bio VARCHAR(100),
 	ville VARCHAR(40),
 	etat VARCHAR (40),
 	pays VARCHAR (40),
-	
 )
-
-
 CREATE TABLE client (
 	id INT ,
 	nom_famille VARCHAR(40) ,
 	prenom VARCHAR(40) ,
-	courriel VARCHAR(255),
+	courriel VARCHAR(100),
 	telephone VARCHAR(40),
 	anniversaire Date ,
 	no_civique INT ,
@@ -28,31 +25,16 @@ CREATE TABLE client (
 	mot_de_passe  VARCHAR(40) ,
 	id_forfait INT 
 )
-    
-CREATE TABLE film (
+
+  CREATE TABLE film (
 	id INT 
-	titre VARCHAR(255) ,
+	titre VARCHAR(100) ,
 	annee INT l,
-	langue VARCHAR(255) ,
+	langue VARCHAR(100) ,
 	duree INT l,
 	resumé VARCHAR(255),
 	poster varcharVARCHAR(255)
 
-)
-	
-
-)
-CREATE TABLE pays (
-	id INT ,
-	pays VARCHAR(255) 
-)
-  
-	
-  
-  
-  
-CREATE TABLE acteur (
-	id_personne 
 )
 
 CREATE TABLE realisateur (
@@ -61,38 +43,46 @@ CREATE TABLE realisateur (
 
 CREATE TABLE scenariste (
 	id INT ,
-	scenariste VARCHAR(255) 
+	scenariste VARCHAR(40) 
 )
 
 CREATE TABLE genre (
 	id INT ,
-	genre VARCHAR(255) 
+	genre VARCHAR(40) 
 )
 
+CREATE TABLE pays (
+	id INT ,
+	pays VARCHAR(100) 
+)
+  
 CREATE TABLE annonce (
 	id INT ,
-	annonce VARCHAR(255) ,
+	annonce VARCHAR(40) ,
 	id_film INT 
 )
-
+	
+CREATE TABLE acteur (
+	id_personne 
+)
 
 CREATE TABLE forfait (
 	id INT ,
-	forfait VARCHAR(255)
+	forfait VARCHAR(100)
 )
 
 CREATE TABLE info_credit (
-	id INT not null,
-	carte VARCHAR(255) not null,
-	exp_mois INT not null,
-	exp_annee INT not null,
-	id_clint INT not null
+	id INT ,
+	carte VARCHAR(100) ,
+	exp_mois INT 
+	exp_annee INT ,
+	id_clint INT 
 )
 
 CREATE TABLE role (
 	id_acteur INT,
 	id_film INT ,
-	personnage VARCHAR(255)
+	personnage VARCHAR(100)
 )
 
 CREATE TABLE film_scenariste(
